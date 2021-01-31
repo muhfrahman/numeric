@@ -1,0 +1,171 @@
+
+.wrap-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    background: #00539CFF;
+    height: 64px;
+}
+.brand{
+    z-index: 1;
+}
+.content-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 64px;
+}
+.content-nav h2{
+    font-size: large;
+}
+.content-nav p{
+    font-size: small;
+}
+.links-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+.links-nav .menu-nav,.links-nav .burger-nav{
+    margin: 0px 10px 0px 10px;
+}
+.content-nav h2,.content-nav p, .links-nav a{
+    color: white;
+}
+.menu-nav{
+    position: absolute;
+    top: 4em;
+    left: -0.63em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.menu-nav a{
+    height: 100%;
+    padding: 25px 30px 25px 30px;
+    background: #00539CFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu-nav a:active{
+    background: rgb(0, 52, 97);
+}
+.menu-nav a p{
+    font-size: x-large;
+}
+.burger{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.burger .layer{
+    background: white;
+    border-radius: 2px;
+    height: 7px;
+    width: 40px;
+}
+
+.burger .space{
+    height: 8px;
+    width: 40px;
+}
+
+#layer1{
+    
+}
+#layer2{
+    
+}
+
+#layer3{
+    
+}
+
+/* SHOW MENU */
+@keyframes transformBurgers{
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+@keyframes transformBurger1{
+    from{
+        position: absolute;
+        top: 0.85em;
+    }
+    to{
+        top: 1.78em;
+        transform: rotate(-45deg);
+    }
+}
+@keyframes transformBurger2{
+    from{
+        position: absolute;
+        bottom: 0.85em;
+    }
+    to{
+        bottom: 1.78em;
+        transform: rotate(45deg);
+    }
+}
+
+/* HIDE MENU */
+@keyframes returnBurgers{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+@keyframes returnBurger1{
+    from{
+        top: 1.78em;
+    }
+    to{
+        position: block;
+        top: 0.85em;
+        transform: rotate(0deg);
+    }
+}
+@keyframes returnBurger2{
+    from{
+        
+        bottom: 1.78em;
+    }
+    to{
+        position: block;
+        bottom: 0.85em;
+        transform: rotate(0deg);
+    }
+}
+/* SHOW MENUS */
+@keyframes showMenu{
+    from{
+        top: -5em;
+        opacity: 0%;
+    }
+    to{
+        top: 4em;
+        opacity: 100%;
+    }
+}
+@keyframes hideMenu{
+    from{
+        top: 4em;
+        opacity: 100%;
+    }
+    to{
+        top: -12em;
+        opacity: 0%;
+    }
+}
